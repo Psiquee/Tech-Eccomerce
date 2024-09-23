@@ -5,36 +5,36 @@ document.querySelector('.navbar-toggler').addEventListener('click', function() {
 
 const productos = [
   // Netbooks
-  { id: 1, categoria: "Netbook", nombre: "Netbook Lenovo", precio: 500, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
-  { id: 2, categoria: "Netbook", nombre: "Netbook HP", precio: 600, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
-  { id: 3, categoria: "Netbook", nombre: "Netbook Dell", precio: 550, imagen: "https://placehold.co/150x150", descuento: 10, esNuevo: true },
-  { id: 4, categoria: "Netbook", nombre: "Netbook Acer", precio: 650, imagen: "https://placehold.co/150x150", descuento: 5, esNuevo: true },
-  { id: 5, categoria: "Netbook", nombre: "Netbook Asus", precio: 580, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
-  { id: 6, categoria: "Netbook", nombre: "Netbook Toshiba", precio: 700, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
+  { id: 1, categoria: "Netbook", nombre: "Netbook Lenovo", precio: 500, imagen: "http://http2.mlstatic.com/D_NQ_NP_2X_886129-MLU76533202292_052024-F.webp", descuento: null, esNuevo: true },
+  { id: 2, categoria: "Netbook", nombre: "Netbook HP", precio: 600, imagen: "https://microglobalpromos.com.ar/2023/img/062023/6C5X6LTAC8_3.jpg", descuento: null, esNuevo: false },
+  { id: 3, categoria: "Netbook", nombre: "Netbook Dell", precio: 550, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_724346-MLU74110207570_012024-F.webp", descuento: 10, esNuevo: true },
+  { id: 4, categoria: "Netbook", nombre: "Netbook Acer", precio: 650, imagen: "https://sistema.langtecnologia.com.ar/img/qloud/1693/5976_3.jpg", descuento: 5, esNuevo: true },
+  { id: 5, categoria: "Netbook", nombre: "Netbook Asus", precio: 580, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_622950-MLA72295175214_102023-F.webp", descuento: null, esNuevo: true },
+  { id: 6, categoria: "Netbook", nombre: "Netbook Toshiba", precio: 700, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_745022-MLA78424422778_082024-F.webp", descuento: null, esNuevo: false },
 
   // PC Armadas
-  { id: 7, categoria: "Pc Armadas", nombre: "PC Gamer", precio: 1200, imagen: "https://placehold.co/150x150", descuento: 5, esNuevo: false },
-  { id: 8, categoria: "Pc Armadas", nombre: "PC de Oficina", precio: 800, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
-  { id: 9, categoria: "Pc Armadas", nombre: "PC de Diseño", precio: 1500, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
-  { id: 10, categoria: "Pc Armadas", nombre: "PC para Gaming", precio: 2000, imagen: "https://placehold.co/150x150", descuento: 10, esNuevo: false },
-  { id: 11, categoria: "Pc Armadas", nombre: "PC de Estudio", precio: 700, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
-  { id: 12, categoria: "Pc Armadas", nombre: "PC Compacta", precio: 600, imagen: "https://placehold.co/150x150", descuento: 15, esNuevo: false },
+  { id: 7, categoria: "Pc Armadas", nombre: "PC Gamer", precio: 1200, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_813452-MLA49570364178_042022-F.webp", descuento: 5, esNuevo: false },
+  { id: 8, categoria: "Pc Armadas", nombre: "PC de Oficina", precio: 800, imagen: "https://electropc.com.ar/wp-content/uploads/oficinamoni-jpg.webp", descuento: null, esNuevo: true },
+  { id: 9, categoria: "Pc Armadas", nombre: "PC de Diseño", precio: 1500, imagen: "https://nanotec.com.ar/uploads/img/webp/512/eahvimp9l.webp", descuento: null, esNuevo: true },
+  { id: 10, categoria: "Pc Armadas", nombre: "PC para Gaming", precio: 2000, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_688193-MLA54924055401_042023-F.webp", descuento: 10, esNuevo: false },
+  { id: 11, categoria: "Pc Armadas", nombre: "PC de Estudio", precio: 700, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_610689-MLA54865198580_042023-F.webp", descuento: null, esNuevo: true },
+  { id: 12, categoria: "Pc Armadas", nombre: "PC Compacta", precio: 600, imagen: "https://bangho.vtexassets.com/arquivos/ids/161357-800-auto?v=638126711634930000&width=800&height=auto&aspect=true", descuento: 15, esNuevo: false },
 
   // Perifericos
-  { id: 13, categoria: "Perifericos", nombre: "Mouse Gamer", precio: 50, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
-  { id: 14, categoria: "Perifericos", nombre: "Teclado Mecánico", precio: 100, imagen: "https://placehold.co/150x150", descuento: 15, esNuevo: true },
-  { id: 15, categoria: "Perifericos", nombre: "Auriculares Inalámbricos", precio: 80, imagen: "https://placehold.co/150x150", descuento: 10, esNuevo: true },
-  { id: 16, categoria: "Perifericos", nombre: "Webcam HD", precio: 60, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
-  { id: 17, categoria: "Perifericos", nombre: "Mouse Inalámbrico", precio: 30, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
-  { id: 18, categoria: "Perifericos", nombre: "Silla Gamer", precio: 200, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: true },
+  { id: 13, categoria: "Perifericos", nombre: "Mouse Gamer", precio: 50, imagen: "https://media.istockphoto.com/id/960058256/es/foto/rat%C3%B3n-para-juegos-aislado-sobre-fondo-blanco.jpg?s=1024x1024&w=is&k=20&c=SRA19eG-pm8zWELnh-HqjM4Q7WfgPbXura1YrqZueaA=", descuento: null, esNuevo: false },
+  { id: 14, categoria: "Perifericos", nombre: "Teclado Mecánico", precio: 100, imagen: "https://images.unsplash.com/photo-1655176471504-98ce2bd8af06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", descuento: 15, esNuevo: true },
+  { id: 15, categoria: "Perifericos", nombre: "Auriculares Inalámbricos", precio: 80, imagen: "https://images.unsplash.com/photo-1612858249937-1cc0852093dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", descuento: 10, esNuevo: true },
+  { id: 16, categoria: "Perifericos", nombre: "Webcam HD", precio: 60, imagen: "https://images.unsplash.com/photo-1503071866712-4af2112f609b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", descuento: null, esNuevo: false },
+  { id: 17, categoria: "Perifericos", nombre: "Mouse Inalámbrico", precio: 30, imagen: "https://images.unsplash.com/photo-1618499890638-3a0dd4b278b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", descuento: null, esNuevo: true },
+  { id: 18, categoria: "Perifericos", nombre: "Silla Gamer", precio: 200, imagen: "https://media.istockphoto.com/id/1281207717/es/foto/silla-de-juego-roja-y-negra-aislada.jpg?s=2048x2048&w=is&k=20&c=nUO-hX3uU-wY6uIqe68m6-VQ0DsOS36EqX7IsjtlOd8=", descuento: null, esNuevo: true },
 
   // Monitores
-  { id: 19, categoria: "Monitores", nombre: "Monitor Samsung", precio: 300, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
-  { id: 20, categoria: "Monitores", nombre: "Monitor LG", precio: 350, imagen: "https://placehold.co/150x150", descuento: 20, esNuevo: true },
-  { id: 21, categoria: "Monitores", nombre: "Monitor Dell", precio: 400, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
-  { id: 22, categoria: "Monitores", nombre: "Monitor BenQ", precio: 320, imagen: "https://placehold.co/150x150", descuento: 10, esNuevo: true },
-  { id: 23, categoria: "Monitores", nombre: "Monitor AOC", precio: 400, imagen: "https://placehold.co/150x150", descuento: 5, esNuevo: true },
-  { id: 24, categoria: "Monitores", nombre: "Monitor Asus", precio: 450, imagen: "https://placehold.co/150x150", descuento: null, esNuevo: false },
+  { id: 19, categoria: "Monitores", nombre: "Monitor Samsung", precio: 300, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_843829-MLU72646996287_112023-F.webp", descuento: null, esNuevo: false },
+  { id: 20, categoria: "Monitores", nombre: "Monitor LG", precio: 350, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_936720-MLU77463381807_072024-F.webp", descuento: 20, esNuevo: true },
+  { id: 21, categoria: "Monitores", nombre: "Monitor Dell", precio: 400, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_941863-MLU72645987607_112023-F.webp", descuento: null, esNuevo: false },
+  { id: 22, categoria: "Monitores", nombre: "Monitor BenQ", precio: 320, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_613690-MLA44737119650_012021-F.webp", descuento: 10, esNuevo: true },
+  { id: 23, categoria: "Monitores", nombre: "Monitor AOC", precio: 400, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_669857-MLA48690757068_122021-F.webp", descuento: 5, esNuevo: true },
+  { id: 24, categoria: "Monitores", nombre: "Monitor Asus", precio: 450, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_699498-MLA44770574696_022021-F.webp", descuento: null, esNuevo: false },
 ];
 
 
@@ -60,7 +60,9 @@ function mostrarProductos(categoria) {
                             `$${producto.precio}`
                         }
                     </h6>
+                     <div><a href="#" class="btn btn-primary">Add Card</a></div>
                   ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
+                 
               </div>
           </div>
       </div>

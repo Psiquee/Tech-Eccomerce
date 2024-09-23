@@ -38,45 +38,98 @@ const productos = [
 ];
 
 
+
 function mostrarProductos(categoria) {
-  const container = document.querySelector('.cards-products .row');
-  container.innerHTML = ''; 
+    const container = document.querySelector('.cards-products .row');
+    container.innerHTML = ''; 
 
-  const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
+    const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
+    
+    if (productosFiltrados.length === 0) {
+        container.innerHTML = '<p>No se encontraron productos.</p>';
+        return;
+    }
 
-  const productosHTML = productosFiltrados.map(producto => `
-      <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-              <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                  <img src="${producto.imagen}" class="w-100" alt="${producto.nombre}" />
-              </div>
-              <div class="card-body">
-                  <a href="#" class="text-reset">
-                      <h5 class="card-title mb-3">${producto.nombre}</h5>
-                  </a>
-                 <h6 class="mb-3">
+    const productosHTML = productosFiltrados.map(producto => `
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+                    <img src="${producto.imagen}" class="w-100" alt="${producto.nombre}" />
+                </div>
+                <div class="card-body">
+                    <a href="#" class="text-reset">
+                        <h5 class="card-title mb-3">${producto.nombre}</h5>
+                    </a>
+                    <h6 class="mb-3">
                         ${producto.descuento ? 
                             `<s>$${producto.precio}</s><strong class="ms-2 text-danger">$${(producto.precio * (1 - producto.descuento / 100)).toFixed(2)}</strong>` : 
                             `$${producto.precio}`
                         }
                     </h6>
-                     <div><a href="#" class="btn btn-primary">Add Card</a></div>
-                  ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
-                 
-              </div>
-          </div>
-      </div>
-  `).join(''); // unir elementos
+                    <div><a href="#" class="btn btn-primary">Add Card</a></div>
+                    ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
+                </div>
+            </div>
+        </div>
+    `).join(''); 
 
-  container.innerHTML = productosHTML; // insertar html
+    container.innerHTML = productosHTML; 
 }
 
+function mostrarProductosFiltrados(busqueda) {
+    const container = document.querySelector('.cards-products .row');
+    container.innerHTML = ''; // Limpiar el contenedor
+
+    const productosFiltrados = productos.filter(producto => 
+        producto.nombre.toLowerCase().includes(busqueda.toLowerCase()) 
+    );
+
+    if (productosFiltrados.length === 0) {
+        container.innerHTML = '<p>No se encontraron productos.</p>';
+        return;
+    }
+
+    const productosHTML = productosFiltrados.map(producto => `
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+                    <img src="${producto.imagen}" class="w-100" alt="${producto.nombre}" />
+                </div>
+                <div class="card-body">
+                    <a href="#" class="text-reset">
+                        <h5 class="card-title mb-3">${producto.nombre}</h5>
+                    </a>
+                    <h6 class="mb-3">
+                        ${producto.descuento ? 
+                            `<s>$${producto.precio}</s><strong class="ms-2 text-danger">$${(producto.precio * (1 - producto.descuento / 100)).toFixed(2)}</strong>` : 
+                            `$${producto.precio}`
+                        }
+                    </h6>
+                    <div><a href="#" class="btn btn-primary">Add Card</a></div>
+                    ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
+                </div>
+            </div>
+        </div>
+    `).join(''); 
+
+    container.innerHTML = productosHTML; // inserta HTML
+}
+
+// event listener
+document.getElementById('search-addon').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    const searchTerm = document.getElementById('searchInput').value; // valor buscado
+    if (searchTerm) {
+        mostrarProductosFiltrados(searchTerm); // llamo a la funcion
+    } else {
+        mostrarProductos(''); 
+    }
+});
 
 window.onload = function() {
-  const page = document.querySelector('[data-page]');
-
-  if (page) {
-      const categoria = page.getAttribute('data-page');
-      mostrarProductos(categoria.charAt(0).toUpperCase() + categoria.slice(1).replace('-', ' ')); // 
-  }
+    const page = document.querySelector('[data-page]');
+    if (page) {
+        const categoria = page.getAttribute('data-page');
+        mostrarProductos(categoria.charAt(0).toUpperCase() + categoria.slice(1).replace('-', ' '));
+    }
 };

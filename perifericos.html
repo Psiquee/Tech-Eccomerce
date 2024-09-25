@@ -54,9 +54,9 @@
                       <button onclick="location.href='register.html'" data-mdb-ripple-init type="button" class="btn btn-primary me-3">
                         Sign up
                       </button>
-                    <button class="input-group-text border-0" id="search-addon">
-                      <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
+                      <button class="input-group-text border-0" id="img-carrito" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
           
                   </div>
             </div>
@@ -81,6 +81,37 @@
 
 
     </div>
+
+     <!-- carrito -->
+     <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="carritoModalLabel">Carrito de Compras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table id="lista-carrito" class="table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <div id="total-carrito" class="total">Total: $0</div>
+              <button id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
 
 
 

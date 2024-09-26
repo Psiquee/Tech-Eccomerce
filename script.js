@@ -35,6 +35,14 @@ const productos = [
   { id: 22, categoria: "Monitores", nombre: "Monitor BenQ", precio: 320, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_613690-MLA44737119650_012021-F.webp", descuento: 10, esNuevo: true },
   { id: 23, categoria: "Monitores", nombre: "Monitor AOC", precio: 400, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_669857-MLA48690757068_122021-F.webp", descuento: 5, esNuevo: true },
   { id: 24, categoria: "Monitores", nombre: "Monitor Asus", precio: 450, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_699498-MLA44770574696_022021-F.webp", descuento: null, esNuevo: false },
+
+  // Celulares
+  { id: 25, categoria: "Celulares", nombre: "iPhone 12", precio: 900, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_875663-MLA45730353061_042021-F.webp", descuento: 5, esNuevo: true },
+  { id: 26, categoria: "Celulares", nombre: "Samsung Galaxy S21", precio: 850, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_673487-MLA70080811085_062023-F.webp", descuento: 10, esNuevo: false },
+  { id: 27, categoria: "Celulares", nombre: "Google Pixel 6 Pro", precio: 780, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_956464-MLU78693703552_092024-F.webp", descuento: null, esNuevo: true },
+  { id: 28, categoria: "Celulares", nombre: "Xiaomi Mi 11T Pro Dual", precio: 700, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_993662-MLA69549729008_052023-F.webp", descuento: null, esNuevo: false },
+  { id: 30, categoria: "Celulares", nombre: "OnePlus 12 Dual", precio: 1700, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_735066-MLA74505051261_022024-F.webp", descuento: 8, esNuevo: true },
+  { id: 31, categoria: "Celulares", nombre: "Motorola Edge 20", precio: 680, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_681042-MLA78243954834_082024-F.webp", descuento: 10, esNuevo: false }
 ];
 
 
@@ -105,7 +113,7 @@ function mostrarProductosFiltrados(busqueda) {
                             `$${producto.precio}`
                         }
                     </h6>
-                    <div><a href="#" class="btn btn-primary">Add Card</a></div>
+                    <div><button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Add Card</button></div>
                     ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
                 </div>
             </div>
@@ -199,3 +207,6 @@ function vaciarCarrito() {
 // Event listeners
 document.getElementById('vaciar-carrito').addEventListener('click', vaciarCarrito);
 document.querySelector('#lista-carrito').addEventListener('click', eliminarElemento);
+
+
+

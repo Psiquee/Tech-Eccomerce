@@ -63,6 +63,7 @@ Si deseas contribuir a este proyecto, por favor crea un fork del repositorio y e
 - **Figma**: Diseño UI/UX del proyecto. [Ver diseño en Figma](https://www.figma.com/design/Q8M0YmgWu4Jyv1SjNrEKjb/Untitled?node-id=0-1&t=PtSGC5jDJSdfvkEj-0)
 - **Notion**: Administración del proyecto. [Ver proyecto en Notion](https://www.notion.so/Proyecto-CILSA-10650557828a80f3ab2ef4682662cda2)
 - **Vercel**: Despliegue. [Documentación de Vercel](https://vercel.com/docs)
+-  **Drive**: Registro de Epica, Historias de Usuario y Casos de Prueba. [Documentacion QA](https://docs.google.com/spreadsheets/d/1_PDrhl6WoNZKmb-U-FsrtrMOkRq5-v58/edit?usp=sharing&ouid=117237984882410915522&rtpof=true&sd=true)
 
 
 

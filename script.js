@@ -209,4 +209,22 @@ document.getElementById('vaciar-carrito').addEventListener('click', vaciarCarrit
 document.querySelector('#lista-carrito').addEventListener('click', eliminarElemento);
 
 
+// register
 
+//login
+
+//checkout
+
+
+document.getElementById('checkout-button').addEventListener('click', function() {
+    if (carrito.length === 0) {
+        alert('El carrito está vacío. Agrega productos antes de continuar.');
+        return;
+    }
+    
+    // Almacena el carrito en sessionStorage
+    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    
+    // Redirige a la página de checkout
+    window.location.href = 'checkout.html'; // Asegúrate de que este sea el nombre correcto de tu archivo
+});

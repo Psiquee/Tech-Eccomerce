@@ -74,7 +74,7 @@ function mostrarProductos(categoria) {
                             `$${producto.precio}`
                         }
                     </h6>
-                    <div><button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Add Card</button></div>
+                    <div><button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Add product</button></div>
                     ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
                 </div>
             </div>
@@ -113,7 +113,7 @@ function mostrarProductosFiltrados(busqueda) {
                             `$${producto.precio}`
                         }
                     </h6>
-                    <div><button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Add Card</button></div>
+                    <div><button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Add product</button></div>
                     ${producto.esNuevo ? `<span class="badge bg-success">Nuevo</span>` : ''} 
                 </div>
             </div>

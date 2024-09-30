@@ -4,13 +4,13 @@ document.querySelector('.navbar-toggler').addEventListener('click', function() {
 });
 
 const productos = [
-  // Netbooks
-  { id: 1, categoria: "Netbook", nombre: "Netbook Lenovo", precio: 500, imagen: "http://http2.mlstatic.com/D_NQ_NP_2X_886129-MLU76533202292_052024-F.webp", descuento: null, esNuevo: true },
-  { id: 2, categoria: "Netbook", nombre: "Netbook HP", precio: 600, imagen: "https://microglobalpromos.com.ar/2023/img/062023/6C5X6LTAC8_3.jpg", descuento: null, esNuevo: false },
-  { id: 3, categoria: "Netbook", nombre: "Netbook Dell", precio: 550, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_724346-MLU74110207570_012024-F.webp", descuento: 10, esNuevo: true },
-  { id: 4, categoria: "Netbook", nombre: "Netbook Acer", precio: 650, imagen: "https://sistema.langtecnologia.com.ar/img/qloud/1693/5976_3.jpg", descuento: 5, esNuevo: true },
-  { id: 5, categoria: "Netbook", nombre: "Netbook Asus", precio: 580, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_622950-MLA72295175214_102023-F.webp", descuento: null, esNuevo: true },
-  { id: 6, categoria: "Netbook", nombre: "Netbook Toshiba", precio: 700, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_745022-MLA78424422778_082024-F.webp", descuento: null, esNuevo: false },
+  // Notebooks
+  { id: 1, categoria: "Notebook", nombre: "Notebook Lenovo", precio: 500, imagen: "http://http2.mlstatic.com/D_NQ_NP_2X_886129-MLU76533202292_052024-F.webp", descuento: null, esNuevo: true },
+  { id: 2, categoria: "Notebook", nombre: "Notebook HP", precio: 600, imagen: "https://microglobalpromos.com.ar/2023/img/062023/6C5X6LTAC8_3.jpg", descuento: null, esNuevo: false },
+  { id: 3, categoria: "Notebook", nombre: "Notebook Dell", precio: 550, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_724346-MLU74110207570_012024-F.webp", descuento: 10, esNuevo: true },
+  { id: 4, categoria: "Notebook", nombre: "Notebook Acer", precio: 650, imagen: "https://sistema.langtecnologia.com.ar/img/qloud/1693/5976_3.jpg", descuento: 5, esNuevo: true },
+  { id: 5, categoria: "Notebook", nombre: "Notebook Asus", precio: 580, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_622950-MLA72295175214_102023-F.webp", descuento: null, esNuevo: true },
+  { id: 6, categoria: "Notebook", nombre: "Notebook Toshiba", precio: 700, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_745022-MLA78424422778_082024-F.webp", descuento: null, esNuevo: false },
 
   // PC Armadas
   { id: 7, categoria: "Pc Armadas", nombre: "PC Gamer", precio: 1200, imagen: "https://http2.mlstatic.com/D_NQ_NP_2X_813452-MLA49570364178_042022-F.webp", descuento: 5, esNuevo: false },
@@ -62,7 +62,7 @@ function mostrarProductos(categoria) {
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
                 <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                    <img src="${producto.imagen}" class="w-100" alt="${producto.nombre}" />
+                    <img src="${producto.imagen}" class="w-75 mx-4 my-4 " alt="${producto.nombre}" />
                 </div>
                 <div class="card-body">
                     <a href="#" class="text-reset">

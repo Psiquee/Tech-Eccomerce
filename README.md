@@ -38,7 +38,7 @@ El proyecto está organizado en las siguientes secciones:
 
 1. Navega a través de los productos en la página principal.
 2. Usa la barra de búsqueda para encontrar productos específicos.
-3. Haz clic en el botón "Add Card" para agregar productos al carrito.
+3. Haz clic en el botón "Add Product" para agregar productos al carrito.
 4. Haz clic en "Ir a comprar" para proceder al checkout.
 5. Completa los detalles de pago y haz clic en "Pagar".
 
